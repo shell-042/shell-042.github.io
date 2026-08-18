@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>升哲 SENSORO · 九小场所智慧消防解决方案 | 冷咏雪</title>
+  <meta name="description" content="升哲 SENSORO · 九小场所智慧消防解决方案图集（部分）" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    .subpage { padding-top: 96px; padding-bottom: var(--space-10); }
+
+    .subpage__bar {
+      position: sticky; top: 0; z-index: 50;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: var(--space-3) var(--container-pad);
+      background: rgba(10, 26, 85, 0.72);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--hairline);
+    }
+    .subpage__bar img { height: 38px; width: auto; }
+    .subpage__back {
+      color: #fff; font-size: var(--fs-small); font-weight: 500;
+      text-decoration: none; opacity: .85; transition: opacity var(--dur-fast);
+    }
+    .subpage__back:hover { opacity: 1; }
+
+    .subpage__head {
+      max-width: 1040px; margin: var(--space-6) auto var(--space-6);
+      padding: 0 var(--container-pad);
+    }
+    .subpage__head .eyebrow {
+      font-family: var(--font-mono); letter-spacing: .14em;
+      color: var(--blue-mid); font-size: var(--fs-mono);
+    }
+    .subpage__head h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.7rem, 3.6vw, 2.4rem);
+      line-height: 1.2; margin: var(--space-2) 0 var(--space-3);
+      color: var(--blue-deep);
+    }
+    .subpage__lede {
+      max-width: 720px;
+      font-size: var(--fs-body); color: var(--warm-ink);
+      line-height: 1.7;
+      padding-left: var(--space-3);
+      border-left: 3px solid var(--warm-coral);
+    }
+
+    .deck {
+      max-width: 1080px; margin: 0 auto;
+      padding: 0 var(--container-pad);
+      display: flex; flex-direction: column; gap: var(--space-5);
+    }
+    .deck__page {
+      margin: 0;
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      background: var(--blue-mist);
+      border: 1px solid var(--hairline);
+      box-shadow: 0 6px 24px rgba(10, 26, 85, 0.08);
+    }
+    .deck__page img {
+      width: 100%; height: auto; display: block;
+    }
+    .deck__page figcaption {
+      padding: 10px 18px;
+      font-size: var(--fs-small); color: var(--warm-ink);
+      background: #fff; border-top: 1px solid var(--hairline);
+    }
+
+    @media (max-width: 720px) {
+      .subpage { padding-top: 80px; }
+      .subpage__head { margin-top: var(--space-4); }
+      .deck { gap: var(--space-4); }
+    }
+  </style>
+</head>
+<body>
+  <div class="subpage__bar">
+    <a href="index.html" aria-label="返回首页">
+      <img src="assets/logo.svg" alt="shell 花体 L 标识" />
+    </a>
+    <a class="subpage__back" href="index.html#portfolio">← 返回作品集</a>
+  </div>
+
+  <main class="subpage">
+    <header class="subpage__head">
+      <p class="eyebrow">SENSORO · CASE 01</p>
+      <h1>智慧消防解决方案图集</h1>
+      <p class="subpage__lede">
+        把九小场所的水、电、燃气、火，收拢成一张基层消防看得懂的巡检信号表。
+      </p>
+    </header>
+
+    <section class="deck" aria-label="解决方案图集">
+      <figure class="deck__page">
+        <img src="assets/cases/sensoro-page-1.jpg" alt="封面 · 九小场所智慧消防解决方案" loading="lazy" />
+        <figcaption>封面 · 方案主张与品牌主线</figcaption>
+      </figure>
+      <figure class="deck__page">
+        <img src="assets/cases/sensoro-page-2.jpg" alt="政策背景与系统架构 · 痛点与解决思路" loading="lazy" />
+        <figcaption>政策背景与系统架构 · 痛点与解决思路</figcaption>
+      </figure>
+      <figure class="deck__page">
+        <img src="assets/cases/sensoro-page-3.jpg" alt="应用场景与服务模式" loading="lazy" />
+        <figcaption>应用场景与服务模式 · 城市毛细血管视角</figcaption>
+      </figure>
+      <figure class="deck__page">
+        <img src="assets/cases/sensoro-page-4.jpg" alt="智能硬件、项目案例与客户价值" loading="lazy" />
+        <figcaption>智能硬件与项目案例 · 客户价值</figcaption>
+      </figure>
+    </section>
+  </main>
+</body>
+</html>

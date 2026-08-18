@@ -1,0 +1,652 @@
+<!doctype html>
+<!--
+  ================================================================
+  冷咏雪 · 个人品牌网站
+  ------------------------------------------------------------
+  改什么在哪：
+    1. 文案：搜下面的 "BLOCK · 标题" 注释，所有可改文案都在那里
+    2. 颜色 / 字体 / 间距：css/tokens.css 一个文件搞定
+    3. 图片资源：assets/ 下替换同名文件即可
+    4. 案例数据：search "data-block" 可定位到每个案例的占位
+    5. 联系方式：CONTACT_BLOCK 已填邮箱/微信，可继续补充
+
+  对应原始素材：
+    - 简历：/Users/shell/Downloads/冷咏雪-品牌公关.pdf
+    - 作品集：/Users/shell/Downloads/冷咏雪作品集0625.pdf
+  ================================================================
+-->
+<html lang="zh-CN" data-theme="default">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>冷咏雪 · 品牌公关</title>
+  <meta name="description" content="冷咏雪 · 品牌内容负责人 · 长内容 / 公共传播 / 事件策划" />
+
+  <!-- 字体（Google Fonts，缓存友好；离线时自动 fallback 到系统字体） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- 设计令牌 + 视觉样式 + 响应式 -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<!-- ====================================================================
+     顶部导航 / Top Nav
+     ==================================================================== -->
+<header class="nav" data-component="nav">
+  <a class="nav__logo" href="#hero" aria-label="冷咏雪 shell">
+    <!-- LOGO_BLOCK · 贝壳标识，替换 assets/logo.svg 即可换图 -->
+    <img class="nav__logo-mark" src="assets/logo.svg" alt="shell 贝壳标识" />
+  </a>
+
+  <nav class="nav__menu" aria-label="主导航">
+    <a href="#about">关于</a>
+    <a href="#experience">经历</a>
+    <a href="#skills">能力</a>
+    <a href="#portfolio">作品集</a>
+    <a href="#impact">数据</a>
+    <a href="#self-media">媒体</a>
+    <a href="#articles">稿件</a>
+  </nav>
+
+  <a class="nav__cta" href="#contact">联系我</a>
+</header>
+
+
+<!-- ====================================================================
+     HERO · 首页首屏
+     ----------------------------------------------------------------
+     BLOCK · HERO_HEADLINE  标题（建议文案 / 可改）
+     BLOCK · HERO_TAGLINE   副标题（一句话定位 / 可改）
+     BLOCK · HERO_PORTRAIT 形象照占位
+     ==================================================================== -->
+<section id="hero" class="hero">
+  <!-- 几何背景：上半蓝 + 右下珊瑚弧 -->
+  <div class="hero__bg" aria-hidden="true">
+    <div class="hero__shape hero__shape--arc-1"></div>
+    <div class="hero__shape hero__shape--arc-2"></div>
+    <div class="hero__shape hero__shape--arc-3"></div>
+    <!-- 形象照周围的渐变气泡：填补蓝色块留白，呼应顶部 arc 光斑 -->
+    <div class="hero__shape hero__shape--bubble-1"></div>
+    <div class="hero__shape hero__shape--bubble-2"></div>
+    <div class="hero__shape hero__shape--bubble-3"></div>
+  </div>
+
+  <div class="hero__inner container">
+    <p class="hero__eyebrow">BRAND · STORY · PUBLIC VOICE</p>
+
+    <h1 class="hero__headline">
+      让品牌<br/>
+      <em>讲一个</em>值得<br/>
+      被听见的故事
+    </h1>
+
+    <p class="hero__tagline">
+      冷咏雪 · 品牌公关人。近 10 年 ToB·ToG 内容与公共传播经验。<br/>
+      专注把科技、产业与人物，写进一个读者愿意读完的句子。
+    </p>
+
+    <div class="hero__actions">
+      <a class="btn btn--warm" href="#portfolio">查看作品集</a>
+      <a class="btn btn--ghost" href="#about">关于我 →</a>
+    </div>
+
+    <!-- 形象照 BLOCK · HERO_PORTRAIT · 已替换 portrait.jpg -->
+    <div class="hero__portrait" aria-label="个人形象照">
+      <div class="hero__portrait-frame">
+        <img class="hero__portrait-img"
+             src="assets/portraits/portrait.jpg"
+             alt="冷咏雪 形象照 · 2025" />
+      </div>
+      <span class="hero__portrait-meta">PHOTO · 2025</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================================
+     ABOUT · 关于
+     ----------------------------------------------------------------
+     BLOCK · ABOUT_LEAD   引言
+     BLOCK · ABOUT_BIO    详细简介（两段）
+     BLOCK · ABOUT_TAGS   三组专长标签
+     ==================================================================== -->
+<section id="about" class="section section--warm">
+  <div class="container section__head">
+    <p class="section__num">01 — 关于</p>
+    <h2 class="section__title">用内容，<br/><em>把事情讲清楚。</em></h2>
+  </div>
+
+  <div class="container about">
+    <div class="about__lead">
+      <!-- BLOCK · ABOUT_LEAD -->
+      <p>
+        我是冷咏雪，做市场·品牌近十年，长期为科技公司与高端项目
+        做内容策划与传播设计。SENSORO 升哲、长江商学院、思必驰——这些我
+        一手写下名字的作品，是我关于「好内容如何变成影响力」的答卷。
+      </p>
+    </div>
+
+    <div class="about__bio">
+      <!-- BLOCK · ABOUT_BIO -->
+      <p>
+        我相信公关不是「发稿」，是把一个复杂的判断，
+        翻译成一个读者愿意花三分钟看完、并愿意转述的叙事。
+        我做过的每一次发布、每一场论坛、每一个被引用的标题，
+        都在沿着这条主线。
+      </p>
+      <p>
+        近年专注「长内容 + 公共传播」的复合打法：让一个创始人故事，
+        同时长成一份公关稿、一篇人物专访、一场行业论坛。
+      </p>
+    </div>
+
+    <div class="about__tags">
+      <!-- BLOCK · ABOUT_TAGS · 三组专长 -->
+      <div>
+        <h3>擅长做什么</h3>
+        <ul>
+          <li>品牌定位与年度内容策略</li>
+          <li>创始人 / 品牌人物专访</li>
+          <li>行业论坛总策划与执行</li>
+          <li>媒体关系与危机响应</li>
+        </ul>
+      </div>
+      <div>
+        <h3>输出过什么</h3>
+        <ul>
+          <li>构建多位一体品牌内容体系</li>
+          <li>独立策划执行 500<sup>+</sup> 人行业论坛</li>
+          <li>企业家深度稿最高阅读 5700<sup>+</sup></li>
+        </ul>
+      </div>
+      <div>
+        <h3>在意什么</h3>
+        <ul>
+          <li>事实先于观点</li>
+          <li>长期价值先于短期数据</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================================
+     EXPERIENCE · 职业经历
+     ----------------------------------------------------------------
+     BLOCK · EXP_ITEMS · 修改时间线中条目
+     ==================================================================== -->
+<section id="experience" class="section section--cool">
+  <div class="container section__head">
+    <p class="section__num">02 — 经历</p>
+    <h2 class="section__title">在三个<em>组织</em>里，<br/>写下同一件事的不同面。</h2>
+  </div>
+
+  <ol class="timeline container">
+    <!-- BLOCK · EXP_ITEMS · 每条：年份 / 机构 / 角色 / 要点 -->
+    <li class="timeline__item">
+      <div class="timeline__year">2021.05 — 至今</div>
+      <div class="timeline__body">
+        <h3>SENSORO 升哲科技 · 品牌内容负责人</h3>
+        <p class="timeline__role">Brand &amp; Content Lead</p>
+        <p class="timeline__desc">
+          主导智慧城市、算力建设、AI 应用领域的品牌内容策略。构建「公司介绍+技术解读+场景落地」三位一体内容体系，统筹中关村论坛、服贸会等国家级峰会参展内容。
+        </p>
+        <ul class="timeline__hl">
+          <li>构建三位一体内容体系与技术极客认知</li>
+          <li>统筹国家级峰会内容主线</li>
+          <li>输出《市场观察周报》支撑政企对接</li>
+        </ul>
+      </div>
+    </li>
+
+    <li class="timeline__item">
+      <div class="timeline__year">2020.03 — 2021.03</div>
+      <div class="timeline__body">
+        <h3>思必驰 · 市场经理</h3>
+        <p class="timeline__role">Marketing Manager</p>
+        <p class="timeline__desc">
+          负责 AIoT 与智能车联网业务线产品内容产出及新媒体矩阵运营。主导智能梯控产品上市推广全案。
+        </p>
+        <ul class="timeline__hl">
+          <li>智能梯控产品上市推广回收 80<sup>+</sup> 商务线索</li>
+          <li>主导【声姿】系列稿件视觉体系化升级沿用至今</li>
+          <li>新媒体矩阵运营单篇获 6000<sup>+</sup> 阅读量</li>
+        </ul>
+      </div>
+    </li>
+
+    <li class="timeline__item">
+      <div class="timeline__year">2016.07 — 2020.02</div>
+      <div class="timeline__body">
+        <h3>青松智慧（北京）科技有限公司</h3>
+        <p class="timeline__role">市场营销</p>
+        <p class="timeline__desc">
+          早期员工，从 0 到 1 搭建公司品牌体系与自媒体矩阵，主导品牌 UI 升级与官网改版。负责内部孵化项目「极光安全」市场工作，兼任云清联盟秘书长。
+        </p>
+        <ul class="timeline__hl">
+          <li>从 0 到 1 搭建品牌体系与全媒体矩阵</li>
+          <li>内部孵化「极光安全」项目品牌与市场运营</li>
+          <li>兼任云清联盟秘书长实现会员单位 10% 增长</li>
+        </ul>
+      </div>
+    </li>
+
+    <li class="timeline__item">
+      <div class="timeline__year">2025.06 — 2026.04</div>
+      <div class="timeline__body">
+        <h3>长江商学院 · 特约内容策划</h3>
+        <p class="timeline__role">Guest Content Strategist</p>
+        <p class="timeline__desc">
+          为长江 MBA 项目提供长期特约内容策划。覆盖企业家人物深度稿、公开课干货稿提炼与播客栏目策划剪辑。
+        </p>
+        <ul class="timeline__hl">
+          <li>企业家深度稿最高阅读 5700<sup>+</sup></li>
+          <li>公开课干货稿获 3200<sup>+</sup> 阅读并被大号转载</li>
+          <li>独立策划剪辑播客新老生对谈栏目《江江讲讲》</li>
+        </ul>
+      </div>
+    </li>
+
+    <li class="timeline__item">
+      <div class="timeline__year">2017.10 — 2017.12</div>
+      <div class="timeline__body">
+        <h3>云清联盟 · 2017 论坛总策划</h3>
+        <p class="timeline__role">Lead Producer</p>
+        <p class="timeline__desc">
+          全程策划「聚力全网 共筑安全长城」高峰论坛，动员京东云、金山云、华为云等厂商参与，主导议题、嘉宾、讲稿到现场执行全流程。
+        </p>
+        <ul class="timeline__hl">
+          <li>现场参会规模达 500<sup>+</sup> 人</li>
+          <li>会后覆盖新浪、搜狐、网易等主流媒体</li>
+          <li>实现媒体曝光量超 2000 万</li>
+        </ul>
+      </div>
+    </li>
+  </ol>
+</section>
+
+
+<!-- ====================================================================
+     SKILLS · 能力
+     ----------------------------------------------------------------
+     BLOCK · SKILLS_GROUPS · 修改分组
+     ==================================================================== -->
+<section id="skills" class="section section--warm">
+  <div class="container section__head">
+    <p class="section__num">03 — 能力</p>
+    <h2 class="section__title">把<em>复杂的事</em>，<br/>写成一句流畅的话。</h2>
+  </div>
+
+  <div class="container skills">
+    <!-- BLOCK · SKILLS_GROUPS · 改下面四组 .skills__card -->
+    <article class="skills__card">
+      <h3>内容 / 文案</h3>
+      <ul>
+        <li>品牌主叙事与年度策划案</li>
+        <li>深度人物 / 创始人专访</li>
+        <li>公关稿件与演讲稿</li>
+        <li>技术语言转译与政务宣传</li>
+      </ul>
+    </article>
+
+    <article class="skills__card">
+      <h3>传播 / 媒体</h3>
+      <ul>
+        <li>全平台媒体关系维护</li>
+        <li>新媒体矩阵运营分发</li>
+        <li>跨平台发布节奏设计</li>
+        <li>行业奖项申报</li>
+      </ul>
+    </article>
+
+    <article class="skills__card">
+      <h3>活动 / 论坛</h3>
+      <ul>
+        <li>行业论坛总策划与现场执行</li>
+        <li>议程设计与嘉宾名单打磨</li>
+        <li>国家级峰会参展内容统筹</li>
+        <li>发布会流程彩排</li>
+      </ul>
+    </article>
+
+    <article class="skills__card">
+      <h3>视觉 / 系统</h3>
+      <ul>
+        <li>品牌视觉体系搭建</li>
+        <li>解决方案手册与可视化一张图</li>
+        <li>KV 主视觉协同</li>
+        <li>AI 工具辅助全链路生产</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+
+<!-- ====================================================================
+     PORTFOLIO · 作品集（四个核心案例）
+     ----------------------------------------------------------------
+     BLOCK · PORTFOLIO_FILTER · 修改标签
+     BLOCK · CASE_<X>      · 修改每个案例的内容
+     ==================================================================== -->
+<section id="portfolio" class="section section--cool">
+  <div class="container section__head">
+    <p class="section__num">04 — 作品集</p>
+    <h2 class="section__title">四个<em>长期项目</em>，<br/>一以贯之的方法。</h2>
+  </div>
+
+  <!-- 筛选条 · BLOCK · PORTFOLIO_FILTER -->
+  <div class="container portfolio__filter" role="tablist">
+    <button class="chip is-active" data-filter="all">全部</button>
+    <button class="chip" data-filter="brand">品牌定位</button>
+    <button class="chip" data-filter="content">长内容</button>
+    <button class="chip" data-filter="forum">论坛策展</button>
+  </div>
+
+  <div class="container portfolio__grid">
+
+    <!-- ───── CASE 01 升哲 SENSORO ───── -->
+    <!-- BLOCK · CASE_01 -->
+    <article class="case" data-cat="brand" id="case-sensoro">
+      <div class="case__cover case__cover--white" data-carousel>
+        <!-- 改图：复制一个 <div class="case__slide"> 并改 src 即可，圆点自动生成 -->
+        <div class="case__track">
+          <div class="case__slide"><img src="assets/cases/sensoro-real-1.jpeg" alt="SENSORO 升哲 · 中文介绍 P1" loading="lazy"></div>
+          <div class="case__slide"><img src="assets/cases/sensoro-real-2.jpeg" alt="SENSORO 升哲 · 中文介绍 P2" loading="lazy"></div>
+          <div class="case__slide"><img src="assets/cases/sensoro-real-3.jpeg" alt="SENSORO 升哲 · 中文介绍 P3" loading="lazy"></div>
+          <div class="case__slide"><img src="assets/cases/sensoro-real-4.jpeg" alt="SENSORO 升哲 · 中文介绍 P4" loading="lazy"></div>
+          <div class="case__slide"><img src="assets/cases/sensoro-real-5.jpeg" alt="SENSORO 升哲 · 英文介绍" loading="lazy"></div>
+        </div>
+        <button class="case__arrow case__arrow--prev" aria-label="上一张">‹</button>
+        <button class="case__arrow case__arrow--next" aria-label="下一张">›</button>
+        <div class="case__dots" aria-hidden="true"></div>
+      </div>
+      <div class="case__meta">
+        <span class="case__tag">01 / 品牌</span>
+        <h3 class="case__title">升哲 SENSORO · 三位一体品牌内容体系</h3>
+        <p class="case__period">2021 — 至今</p>
+      </div>
+      <div class="case__body">
+        <dl>
+          <div><dt>背景</dt><dd>面向智慧城市硬科技公司，构建「公司介绍+技术解读+场景落地」内容体系。统筹官网、白皮书、技术社区稿件分发，以及国家级峰会参展内容与英文材料翻译。</dd></div>
+          <div><dt>成果</dt><dd>打造「技术极客」品牌认知，实景摄影作品收录为正式宣传素材，支撑海外拓展与政务宣传。</dd></div>
+        </dl>
+        <div class="case__links">
+          <a href="https://mp.weixin.qq.com/mp/homepage?__biz=MzIwNTc5OTIzNQ==&hid=3&sn=f3edfa11d846e5b2d07f2c39130548e7&scene=1&devicetype=iOS26.5&version=18004b2c&lang=zh_CN&nettype=WIFI&ascene=7&session_us=gh_ac7ffef46b13&fontScale=100" class="link-arrow" target="_blank" rel="noopener">方案一张图 →</a>
+          <a href="case-sensoro.html" class="link-arrow">方案手册 →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ───── CASE 02 长江商学院 ───── -->
+    <!-- BLOCK · CASE_02 -->
+    <article class="case" data-cat="content" id="case-ckgsb">
+      <div class="case__cover case__cover--white" data-carousel>
+        <div class="case__track">
+          <div class="case__slide"><img src="assets/cases/ckgsb-real-1.png" alt="长江商学院 · 企业家深度稿" loading="lazy"></div>
+          <div class="case__slide"><img src="assets/cases/ckgsb-real-2.png" alt="长江商学院 · 播客《江江讲讲》" loading="lazy"></div>
+        </div>
+        <button class="case__arrow case__arrow--prev" aria-label="上一张">‹</button>
+        <button class="case__arrow case__arrow--next" aria-label="下一张">›</button>
+        <div class="case__dots" aria-hidden="true"></div>
+      </div>
+      <div class="case__meta">
+        <span class="case__tag">02 / 内容</span>
+        <h3 class="case__title">长江 MBA · 人物深度稿与播客策划</h3>
+        <p class="case__period">2025.06 — 2026.04 · 特约策划</p>
+      </div>
+      <div class="case__body">
+        <dl>
+          <div><dt>背景</dt><dd>为加深与产业人群连接，独立完成企业家深度采访撰稿、公开课技术语言大众化提炼，以及小宇宙播客栏目的大纲撰写与后期剪辑。</dd></div>
+          <div><dt>成果</dt><dd>深度稿最高阅读 5700<sup>+</sup>，公开课干货稿 3200<sup>+</sup> 阅读被大号转载，产出 30 分钟成品播客节目。</dd></div>
+        </dl>
+        <div class="case__links">
+          <a href="https://mp.weixin.qq.com/s/DK-E89cCjmxDBBofAiR5qA" class="link-arrow" target="_blank" rel="noopener">人物稿 →</a>
+          <a href="https://www.xiaoyuzhoufm.com/podcast/666168b163c334a2fbc3f794" class="link-arrow" target="_blank" rel="noopener">小宇宙播客 →</a>
+          <a href="https://mp.weixin.qq.com/s/9RwahFShBekly0TSTGcr8w" class="link-arrow" target="_blank" rel="noopener">公开课 →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ───── CASE 03 思必驰 ───── -->
+    <!-- BLOCK · CASE_03 -->
+    <article class="case" data-cat="brand" id="case-aispeech">
+      <div class="case__cover case__cover--white case__cover--ar-1414" data-carousel>
+        <div class="case__track">
+          <div class="case__slide"><img src="assets/cases/aispeech-real-1.jpg" alt="思必驰 · 智能语音电梯小黑盒招商手册 P1" loading="lazy"></div>
+          <div class="case__slide"><img src="assets/cases/aispeech-real-2.jpg" alt="思必驰 · 智能语音电梯小黑盒招商手册 P2" loading="lazy"></div>
+          <div class="case__slide"><img src="assets/cases/aispeech-real-3.jpg" alt="思必驰 · 智能语音电梯小黑盒招商手册 P3" loading="lazy"></div>
+        </div>
+        <button class="case__arrow case__arrow--prev" aria-label="上一张">‹</button>
+        <button class="case__arrow case__arrow--next" aria-label="下一张">›</button>
+        <div class="case__dots" aria-hidden="true"></div>
+      </div>
+      <div class="case__meta">
+        <span class="case__tag">03 / 项目</span>
+        <h3 class="case__title">思必驰 · 智能梯控上市推广</h3>
+        <p class="case__period">2020.03 — 2021.03</p>
+      </div>
+      <div class="case__body">
+        <dl>
+          <div><dt>背景</dt><dd>针对 AIoT 新品上市，负责产品命名、市场包装与垂直媒体原创稿件投放。</dd></div>
+          <div><dt>成果</dt><dd>2 篇稿件精准触达回收 80<sup>+</sup> 商务线索，招商手册支撑全国代理商体系，视觉系统沿用至今形成品牌资产。</dd></div>
+        </dl>
+        <div class="case__links">
+          <a href="https://mp.weixin.qq.com/s/C7XCII4paEc1_BYdaKr0UQ" class="link-arrow" target="_blank" rel="noopener">查看原文 →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ───── CASE 04 云清联盟 ───── -->
+    <!-- BLOCK · CASE_04 -->
+    <article class="case" data-cat="forum" id="case-yunqing">
+      <div class="case__cover case__cover--white case__cover--fill case__cover--ar-32" data-carousel>
+        <div class="case__track">
+          <div class="case__slide"><img src="assets/cases/yunqing-real-1.jpeg" alt="云清联盟 · 2017 论坛全员合影" loading="lazy"></div>
+          <div class="case__slide"><img src="assets/cases/yunqing-real-2.jpeg" alt="云清联盟 · 嘉宾对谈" loading="lazy"></div>
+          <div class="case__slide"><img src="assets/cases/yunqing-real-3.jpg" alt="云清联盟 · 主旨演讲" loading="lazy"></div>
+        </div>
+        <button class="case__arrow case__arrow--prev" aria-label="上一张">‹</button>
+        <button class="case__arrow case__arrow--next" aria-label="下一张">›</button>
+        <div class="case__dots" aria-hidden="true"></div>
+      </div>
+      <div class="case__meta">
+        <span class="case__tag">04 / 论坛</span>
+        <h3 class="case__title">云清联盟 · 2017 年度高峰论坛</h3>
+        <p class="case__period">2017.10 — 2017.12 · 总策划</p>
+      </div>
+      <div class="case__body">
+        <dl>
+          <div><dt>背景</dt><dd>首届联盟论坛需从零立议题并落地。以「聚力全网 共筑安全长城」为主题，动员头部云厂商参与，主控议题、嘉宾、讲稿、会务及媒体沟通全流程。</dd></div>
+          <div><dt>成果</dt><dd>现场到会 500 余人，覆盖新浪、搜狐、网易等主流媒体，媒体曝光量超 2000 万。</dd></div>
+        </dl>
+        <div class="case__links">
+          <a href="https://baijiahao.baidu.com/s?id=1586385754801009768&wfr=spider&for=pc" class="link-arrow" target="_blank" rel="noopener">查看论坛报道 →</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<!-- ====================================================================
+     IMPACT · 数据看板
+     ----------------------------------------------------------------
+     BLOCK · IMPACT_STATS · 改数字
+     ==================================================================== -->
+<section id="impact" class="section section--blue">
+  <div class="container section__head section__head--on-blue">
+    <p class="section__num">05 — 数据</p>
+    <h2 class="section__title">一组数字，<br/><em>写完了这十年。</em></h2>
+  </div>
+
+  <div class="container impact">
+    <!-- BLOCK · IMPACT_STATS · 改数字和大字 -->
+    <div class="impact__item">
+      <b>2000<sup>万+</sup></b>
+      <span>云清联盟论坛媒体曝光</span>
+    </div>
+    <div class="impact__item">
+      <b>233.6<sup>万+</sup></b>
+      <span>个人自媒体矩阵阅读</span>
+    </div>
+    <div class="impact__item">
+      <b>80<sup>+</sup></b>
+      <span>智能梯控项目商务线索</span>
+    </div>
+    <div class="impact__item">
+      <b>5700<sup>+</sup></b>
+      <span>企业家深度稿最高阅读</span>
+    </div>
+    <div class="impact__item">
+      <b>3200<sup>+</sup></b>
+      <span>公开课干货稿阅读</span>
+    </div>
+    <div class="impact__item">
+      <b>500<sup>+</sup></b>
+      <span>行业高峰论坛参会人数</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================================
+     SELF MEDIA · 个人自媒体
+     ----------------------------------------------------------------
+     BLOCK · MEDIA_PLATFORMS · 改下面的卡片
+     ==================================================================== -->
+<section id="self-media" class="section section--warm">
+  <div class="container section__head">
+    <p class="section__num">06 — 自媒体</p>
+    <h2 class="section__title">也<em>自己写</em>。<br/>把判断放到台面上。</h2>
+  </div>
+
+  <div class="container self-media">
+    <!-- BLOCK · MEDIA_PLATFORMS · 替换 placeholder / 加链接 -->
+    <article class="media-card">
+      <h3>个人文字类自媒体矩阵 · 「科学笔记」</h3>
+      <p>万物相连，科技由此开始。</p>
+      <div class="media__links">
+        <a href="https://mp.sohu.com/profile?xpt=NTc3NDIyNjU2M0BzaW5hLnNvaHUuY29t" class="link-arrow" target="_blank" rel="noopener">搜狐号 →</a>
+        <a href="https://www.toutiao.com/c/user/token/CibmWbr7AZXY4RweCcCIVX1OXCwcVz4zEBvt6hs9bQ6Oss_Nx0o-6RpJCjwAAAAAAAAAAAAAUMsCcYRpKXvtCLKlM2NQwjzaHVAGVHfovX2LkicPVbusOHRnWZjCG-0Wm2UUavob7BEQ-e2ZDhjDxYPqBCIBA1ylVU8=/" class="link-arrow" target="_blank" rel="noopener">头条号 →</a>
+      </div>
+    </article>
+    <article class="media-card">
+      <h3>个人短视频类自媒体矩阵 · 「DayDayTech」</h3>
+      <p>海内外前沿科技资讯、趣闻传送门。</p>
+      <div class="media__links">
+        <a href="https://weixin.qq.com/sph/Aiw3IvsCCF" class="link-arrow" target="_blank" rel="noopener">视频号 →</a>
+        <a href="https://xhslink.cn/m/27BHom0i35i" class="link-arrow" target="_blank" rel="noopener">小红书 →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+<!-- ====================================================================
+     07 · 稿件 · 外链（来自 wailian.docx，可继续追加）
+     ================================================================ -->
+<section id="articles" class="section section--cool">
+  <div class="container section__head">
+    <p class="section__num">07 — 稿件</p>
+    <h2 class="section__title">一些<em>公开发表</em>的稿，<br/>记录走过的思考。</h2>
+  </div>
+
+  <div class="container articles">
+    <!-- 稿件按机构分组；新增稿件直接加 <li><a> 即可，样式自动套用 -->
+    <div class="articles__group">
+      <h3>SENSORO 升哲</h3>
+      <ul class="articles__list">
+        <li><a href="https://blog.csdn.net/FL63Zv9Zou86950w/article/details/121045201" target="_blank" rel="noopener">浅析低功耗广域网及在智慧城市中的应用 →</a></li>
+        <li><a href="https://www.thepaper.cn/newsDetail_forward_16927860" target="_blank" rel="noopener">点军区「超级电脑」助力宜昌长江禁渔高效执法 →</a></li>
+        <li><a href="http://www.qhnews.com/newscenter/system/2024/11/21/030307723.shtml" target="_blank" rel="noopener">升哲科技携手公安「数字护航」，两场万人演唱会唱响冬夜 →</a></li>
+        <li><a href="http://www.qinghai.gov.cn/zwgk/system/2025/03/25/030068233.shtml" target="_blank" rel="noopener">科技助力智慧赋能西宁城市治理越来越聪明 →</a></li>
+        <li><a href="https://m.thepaper.cn/baijiahao_20766037" target="_blank" rel="noopener">只需「三秒」，「数字哨兵」助力小区防疫 →</a></li>
+        <li><a href="http://www.hbcaw.gov.cn/znhjs/45856.jhtml" target="_blank" rel="noopener">宜昌市点军区：「数治」赋能「算力」化作「治理力」 →</a></li>
+        <li><a href="https://www.thepaper.cn/newsDetail_forward_16743429" target="_blank" rel="noopener">秒级响应，备受关注的「黑科技」出自点军 →</a></li>
+      </ul>
+    </div>
+
+    <div class="articles__group">
+      <h3>思必驰 Aispeech</h3>
+      <ul class="articles__list">
+        <li><a href="https://mp.weixin.qq.com/s/RXoIxM4CqbIS1PCPwLJASA" target="_blank" rel="noopener">智能语音梯控方案来了，电梯人准备好了吗？ →</a></li>
+        <li><a href="https://mp.weixin.qq.com/s/7Pxfyf_zwILxAsXlOG1WfA" target="_blank" rel="noopener">思必驰AI电视「芯」方案强大却不止于此 →</a></li>
+        <li><a href="https://mp.weixin.qq.com/s/noiNfTkYU_S4j_UcnNo3dQ" target="_blank" rel="noopener">「芯」之所向，思必驰AI芯片TH1520落地车载的破局之变 →</a></li>
+      </ul>
+    </div>
+
+    <div class="articles__group">
+      <h3>长江商学院 CKGSB</h3>
+      <ul class="articles__list">
+        <li><a href="https://mp.weixin.qq.com/s/oqG8deBNghTVmkj9aRH1XQ" target="_blank" rel="noopener">全民「养龙虾」背后：「35岁危机」正被AI Agent逆转 →</a></li>
+        <li><a href="https://mp.weixin.qq.com/s/Fu5AhCajoYXlG22jMKrHUg" target="_blank" rel="noopener">龙虾之后：当Agent成为数字员工，学会管它更重要 →</a></li>
+        <li><a href="https://mp.weixin.qq.com/s/sUwTbS3F6HUJXdXIxeNdWg" target="_blank" rel="noopener">地表太卷，他们向宇宙接单 →</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- 媒体板块已按审阅稿移除：原合作媒体/署名清单为占位与待核内容，用户未保留 -->
+
+
+<!-- ====================================================================
+     CONTACT · 联系（占位）
+     ----------------------------------------------------------------
+     BLOCK · CONTACT_BLOCK · 现在全部留空，按需启用
+     ==================================================================== -->
+<section id="contact" class="section section--warm">
+  <div class="container section__head">
+    <p class="section__num">08 — 联系</p>
+    <h2 class="section__title">希望<em>聊一次</em>：<br/>你的项目 / 我的方法。</h2>
+  </div>
+
+  <div class="container contact">
+    <!-- CONTACT_BLOCK · 现在全部留空占位 · 你要加联系方式就告诉我 -->
+    <p class="contact__placeholder">
+      <!-- BLOCK · CONTACT_NOTE · 提示语，可改 -->
+      请优先通过招聘网站或邮件与我取得联系。
+    </p>
+
+    <div class="contact__slots">
+      <!-- BLOCK · CONTACT_EMAIL -->
+      <div class="contact__slot">
+        <span class="contact__label">EMAIL</span>
+        <span class="contact__value">yakamoz042@163.com</span>
+      </div>
+      <!-- BLOCK · CONTACT_WECHAT -->
+      <div class="contact__slot">
+        <span class="contact__label">WECHAT</span>
+        <span class="contact__value">手机同号</span>
+      </div>
+      <!-- BLOCK · CONTACT_RESUME 已按需求移除：主页不提供简历下载 -->
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================================
+     FOOTER
+     ==================================================================== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>© 2026 冷咏雪</span>
+    <span class="footer__dot">·</span>
+    <span>Brand &amp; Story by 冷咏雪</span>
+    <a href="#hero" class="footer__top">↑ 返回顶部</a>
+  </div>
+</footer>
+
+
+<!-- JS：导航高亮 / 滚动入场 / 作品集筛选 -->
+<script src="js/main.js"></script>
+</body>
+</html>

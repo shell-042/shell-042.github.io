@@ -1,0 +1,126 @@
+/* ============================================================
+   设计令牌 / Design Tokens
+   ------------------------------------------------------------
+   这是整个站点的"单一真相源"。
+   想换色 / 换字体 / 换间距：改这里的变量即可。
+   ============================================================ */
+
+:root {
+  /* ─── 蓝色系（品牌主色，科技感） ─── */
+  --blue-deep:   #0A1A55;   /* 深皇家蓝：Hero/重底色 */
+  --blue-brand:  #1A47E6;   /* 品牌主蓝：主背景 */
+  --blue-mid:    #3B6BFF;   /* 中蓝：强调字 / 链接 */
+  --blue-light:  #93A8FF;   /* 浅蓝：次要文字 / 分割 */
+  --blue-ice:    #EEF2FF;   /* 冰蓝：浅色区块 */
+  --blue-mist:   #F4F6FB;   /* 薄雾：正文底色 */
+
+  /* ─── 暖色系（冲撞 / 过渡） ─── */
+  --warm-paper:  #FBF7F2;   /* 暖白纸张：与蓝交替的底色 */
+  --warm-ink:    #2A1F18;   /* 暖墨：暖色块上的正文 */
+  --warm-coral:  #F2602E;   /* 珊瑚：CTA / 关键数据强调 */
+  --warm-amber:  #FFB562;   /* 琥珀：过渡色 / 中等强调 */
+  --warm-peach:  #FFD3B6;   /* 蜜桃：暖色面积块 */
+  --warm-blush:  #FFE9DC;   /* 腮红：温暖过渡 */
+
+  /* ─── 中性 ─── */
+  --paper:       #FFFFFF;   /* 纯白 */
+  --ink-900:     #0A1230;   /* 深墨 */
+  --ink-700:     #3A445E;   /* 标题灰 */
+  --ink-500:     #6B7290;   /* 副文本 */
+  --ink-300:     #C8CDDE;   /* 弱辅助线 */
+  --hairline:    rgba(255,255,255,0.18);  /* 深底分割线 */
+
+  /* ─── 渐变（蓝→暖的过渡路径） ─── */
+  --grad-blue-warm:
+      linear-gradient(135deg, #1A47E6 0%, #4F73FF 35%, #FFB562 75%, #F2602E 100%);
+  --grad-blue-deep:
+      radial-gradient(ellipse at 80% 0%, #4F73FF 0%, #1A47E6 40%, #0A1A55 100%);
+  --grad-blue-mid:
+      linear-gradient(180deg, #1A47E6 0%, #0A1A55 100%);
+  --grad-warm-soft:
+      linear-gradient(135deg, #FFE9DC 0%, #FFD3B6 100%);
+  --grad-stroke-warm:
+      linear-gradient(90deg, #1A47E6 0%, #FFB562 50%, #F2602E 100%);
+
+  /* ─── 字体 ─── */
+  /* 大标题：英文 → Avenir（Mac 自带；web 用 Montserrat 近似）；
+     中文 → 思源宋体（保留你喜欢的合成斜体设计）。
+     变量名沿用 --font-serif，仅作"标题字体"语义 */
+  --font-serif:  'Avenir', 'Avenir Next', 'Montserrat',
+                 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+
+  /* 数字：回到上一版（DIN 版）字体 = Playfair Display 衬线数字，
+     配合"万/+"等中文单位 fallback 思源宋体。
+     ★ 若你其实想要 DIN 工业感数字，把这里换成 'Barlow','DIN Alternate' 即可 */
+  --font-num:    'Playfair Display', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+
+  /* 正文：
+     英文 → Avenir（Medium 字重命中 --font-body-weight:500）
+     中文 → 思源黑体 CN（本地优先 Source Han Sans CN；web 用 Noto Sans SC）
+     中英文靠字体栈顺序自动分流 */
+  --font-sans:   'Avenir', 'Avenir Next', 'Montserrat',
+                 'Source Han Sans CN', 'Noto Sans SC',
+                 -apple-system, BlinkMacSystemFont, 'PingFang SC',
+                 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+
+  /* 正文基准字重：英文 = Avenir Medium(500)；中文思源黑体走"中黑"。
+     ★ 若你坚持中文纯 Regular，把这里改成 400 即可（一行全局生效） */
+  --font-body-weight: 500;
+
+  --font-mono:   'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* ─── 字号阶梯（移动端数值，桌面端在 [data-mq] 控制） ─── */
+  --fs-display:  clamp(3.6rem, 9vw, 8.4rem);    /* Hero 大标题 */
+  --fs-hero:     clamp(2.2rem, 5vw, 4rem);      /* 板块大标题 */
+  --fs-h1:       clamp(1.8rem, 3.6vw, 2.8rem);  /* 一级标题 */
+  --fs-h2:       clamp(1.4rem, 2.6vw, 1.9rem);  /* 二级标题 */
+  --fs-h3:       1.25rem;
+  --fs-body:     1rem;
+  --fs-small:    0.875rem;
+  --fs-mono:     0.78rem;
+
+  /* ─── 间距 ─── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* ─── 容器 / 栅格 ─── */
+  --container-max: 1240px;
+  --container-pad: clamp(20px, 4vw, 56px);
+  --gutter:        24px;
+
+  /* ─── 圆角 ─── */
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 20px;
+  --r-xl: 32px;
+  --r-pill: 999px;
+
+  /* ─── 阴影 ─── */
+  --shadow-1: 0 1px 2px rgba(10, 18, 48, 0.06),
+              0 4px 12px rgba(10, 18, 48, 0.04);
+  --shadow-2: 0 8px 32px rgba(10, 18, 48, 0.10);
+  --shadow-blue: 0 10px 40px rgba(26, 71, 230, 0.35);
+  --shadow-warm: 0 10px 40px rgba(242, 96, 46, 0.30);
+
+  /* ─── 动效 ─── */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 180ms;
+  --dur-base: 320ms;
+  --dur-slow: 600ms;
+}
+
+/* 暗色 / 暖底扩展（备用，预留给未来切换） */
+[data-theme="warm"] {
+  --ink-900: #2A1F18;
+  --ink-700: #4A3528;
+  --paper:   #FBF7F2;
+}
